@@ -1,0 +1,67 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+
+  .topSection {
+    margin: 30px auto;
+    width: fit-content;
+
+    font-size: 40px;
+  }
+
+  .addTodoContainer {
+    width: fit-content;
+    margin: 50px auto;
+
+    .input {
+      padding: 5px;
+      width: 20vw;
+
+      &::placeholder {
+        color: gray;
+      }
+    }
+
+    button {
+      padding: 5px;
+    }
+  }
+
+  .todosContainer {
+    margin: 20px 200px;
+
+    .todoList {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      padding: 10px;
+      margin-bottom: 20px;
+
+      border: 1px solid black;
+      background-color: azure;
+
+      .todoContent {
+        width: 40%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .buttonContainer {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        button {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  .editContainer {
+    margin: 10px 0;
+  }
+}
