@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*, *:focus, *:hover{
+  outline: none;
+}
+
+
+body {
+  min-height: 100vh;
+  font-family: Inter;
+
+  // background: linear-gradient(45deg, rgb(155, 233, 255), rgb(238, 248, 255), rgb(255, 255, 255));
+}
+
+#root {
+  height: 100%;
+}

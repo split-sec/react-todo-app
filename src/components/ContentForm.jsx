@@ -58,7 +58,9 @@ export default function ContentForm({
         }
       />
       <button
-        onClick={ typeof editTodoId === "number" ? (e) => {
+      className={typeof editTodoId === "number" ? 
+          styles.editButton : styles.addButton}
+        onClick={typeof editTodoId === "number" ? (e) => {
           e.preventDefault();
           if(editTodoContent.trim().length > 0) {
             editTodo();

@@ -3,19 +3,28 @@
   width: 100%;
 
   .topSection {
-    margin: 30px auto;
+    padding: 30px 0;
+    margin: 0 auto;
     width: fit-content;
 
     font-size: 40px;
+    font-weight: 700;
   }
 
   .addTodoContainer {
     width: fit-content;
-    margin: 50px auto;
+    padding-bottom: 30px;
+    margin: 40px auto;
 
     .input {
-      padding: 5px;
+      padding: 10px;
       width: 20vw;
+      border: none;
+      border-radius: 5px;
+
+      &:active {
+        border: none;
+      }
 
       &::placeholder {
         color: gray;
@@ -23,12 +32,43 @@
     }
 
     button {
-      padding: 5px;
+      padding: 8px;
+      margin: 10px;
+      width: 100px;
+
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      
+      border: none;
+      border-radius: 5px;
+    }
+
+    .addButton {
+      background-color: rgba(76, 175, 80, 1);
+
+      &:hover {
+        background-color: rgba(76, 175, 80, 0.9);
+      }
+    }
+
+    .editButton {
+      background-color: rgba(76, 175, 80, 1);
+
+      &:hover {
+        background-color: rgba(76, 175, 80, 0.9);
+      }
     }
   }
 
   .todosContainer {
     margin: 20px 200px;
+
+    .noTodos {
+      font-size: 30px;
+      color: grey;
+      text-align: center;
+    }
 
     .todoList {
       display: flex;
@@ -38,9 +78,9 @@
 
       padding: 10px;
       margin-bottom: 20px;
+      border-radius: 10px;
 
-      border: 1px solid black;
-      background-color: azure;
+      border: 0.5px solid rgb(0, 0, 0);
 
       .todoContent {
         width: 40%;
@@ -55,7 +95,31 @@
         align-items: center;
 
         button {
-          padding: 5px 10px;
+          padding: 8px;
+          width: 100px;
+
+          font-size: 16px;
+          font-weight: 600;
+          color: white;
+          
+          border: none;
+          border-radius: 5px;
+        }
+
+        .editButton {
+          background-color: rgba(76, 175, 80, 1);
+
+          &:hover {
+            background-color: rgba(76, 175, 80, 0.9);
+          }
+        }
+
+        .deleteButton {
+          background-color: rgb(255, 30, 30, 1);
+        
+          &:hover {
+            background-color: rgb(255, 30, 30, 0.9);
+          }
         }
       }
     }

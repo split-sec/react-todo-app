@@ -11,10 +11,6 @@ export default function Home() {
   const [editTodoId, setEditTodoId] = useState(null);
   const [editTodoContent, setEditTodoContent] = useState("");
 
-  useEffect(() => {
-    console.log("$", editTodoId);
-  }, [editTodoId])
-
   function toggleEdit(id) {
     setEditTodoId(id);
     setEditTodoContent(todos.filter(todo => todo.id === id)[0].content);
@@ -22,7 +18,6 @@ export default function Home() {
 
   function deleteTodo(id) {
     const result = todos.filter(todo => todo.id !== id);
-    console.log([...result]);
     setTodos([
       ...result
     ]);
@@ -32,15 +27,16 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <p className={styles.topSection}>Hello {userName}</p>
-
-      <div className={styles.addTodoContainer}>
-        <ContentForm 
-          editTodoId={editTodoId}
-          editTodoContent={editTodoContent}
-          setEditTodoId={setEditTodoId}
-          setEditTodoContent={setEditTodoContent}
-        />
+      <div className={styles.heroSection}>
+        <p className={styles.topSection}>Hello, {userName}!</p>
+        <div className={styles.addTodoContainer}>
+          <ContentForm
+            editTodoId={editTodoId}
+            editTodoContent={editTodoContent}
+            setEditTodoId={setEditTodoId}
+            setEditTodoContent={setEditTodoContent}
+          />
+        </div>
       </div>
 
       <TodoList 

@@ -12,6 +12,8 @@ export default function TodoList({
   return (
     <div className={styles.todosContainer}>
     {
+      todos.length === 0 ? 
+      (<p className={styles.noTodos}>No todos yet</p>) :
       todos?.map((todo, index) => {
         return (
           <div
@@ -21,11 +23,13 @@ export default function TodoList({
             <p className={styles.todoContent}>{todo.content}</p>
             <div className={styles.buttonContainer}>
               <button
+                className={styles.editButton}
                 onClick={() => toggleEdit(todo.id)}
               >
                 Edit
               </button>
               <button
+                className={styles.deleteButton}
                 onClick={() => deleteTodo(todo.id)}
               >
                 Delete
@@ -33,7 +37,7 @@ export default function TodoList({
             </div>
           </div>
         )
-      })
+      }) 
     }
     </div>
   )
